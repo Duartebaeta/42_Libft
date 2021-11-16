@@ -28,8 +28,8 @@ INCLUDES = libft.h
 .c.o:
 	$(CC) $(CFLAGS) -c $(SRCS) $(SRCSB)
 
-$(NAME): $(OBJS) $(BOBJS)
-	ar rcs $(NAME) $(OBJS) $(BOBJS)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 all: $(NAME)
 
@@ -42,5 +42,6 @@ fclean: clean
 re: fclean all
 
 bonus: $(BOBJS)
+		ar rcs $(NAME) $(BOBJS)
 
 .PHONY: all clean fclean re bonus
